@@ -1,0 +1,43 @@
+{
+  "name": "onchain-ai-community-steward",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "hardhat:test": "hardhat test",
+    "hardhat:node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.cjs --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.cjs --network sepolia",
+    "deploy:pass:local": "hardhat run scripts/deploy-pass.cjs --network localhost",
+    "deploy:pass:sepolia": "hardhat run scripts/deploy-pass.cjs --network sepolia",
+    "mint:pass": "hardhat run scripts/mint-pass.cjs",
+    "bot": "node scripts/bot.cjs",
+    "register:commands": "node scripts/register-commands.cjs",
+    "doctor": "node scripts/doctor.cjs",
+    "dev:all": "node scripts/dev-all.cjs"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "discord.js": "^14.16.3",
+    "ethers": "^6.13.4",
+    "next": "^15.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "hardhat": "^2.22.15",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
